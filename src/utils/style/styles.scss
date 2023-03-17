@@ -1,0 +1,8 @@
+@use 'base';
+@use 'media-queries';
+@use 'reset';
+@use 'variables';
+
+.App {
+    max-width: 1600px;
+}
