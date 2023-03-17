@@ -1,0 +1,28 @@
+.home {
+  min-height: 100vh;
+  &.theme {
+    &-light {
+      background-color: var(--bg-white);
+    }
+    &-dark {
+      background-color: var(--bg-black);
+    }
+  }
+  .theme-toggler {
+    cursor: pointer;
+    &-light {
+      color: var(--white);
+    }
+    &-dark {
+      color: var(--dark);
+    }
+  }
+  .text {
+    &-light {
+      color: var(--primary);
+    }
+    &-dark {
+      color: var(--white);
+    }
+  }
+}
