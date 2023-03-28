@@ -32,21 +32,21 @@ const Navbar = () => {
         }`}
         onClick={() => setIsShown(!isShown)}
       >
-        <span className={`toggler__bar bar-${theme}`}></span>
-        <span className={`toggler__bar bar-${theme}`}></span>
-        <span className={`toggler__bar bar-${theme}`}></span>
-        <span className={`toggler__bar bar-${theme}`}></span>
+        <span className="toggler__bar"></span>
+        <span className="toggler__bar"></span>
+        <span className="toggler__bar"></span>
+        <span className="toggler__bar"></span>
       </button>
       <div
-        className={`navbar__nav nav collapse collapse-${theme}${
+        className={`navbar__nav nav nav--${theme} collapse${
           isShown ? ' show' : ''
         }`}
       >
         <ul className="nav__list">
-          <li className={`nav__list__item item item-${theme}`}>A propos</li>
-          <li className={`nav__list__item item item-${theme}`}>Compétences</li>
-          <li className={`nav__list__item item item-${theme}`}>Portfolio</li>
-          <li className={`nav__list__item item item-${theme}`}>Contact</li>
+          <li className="nav__list__item">A propos</li>
+          <li className="nav__list__item">Compétences</li>
+          <li className="nav__list__item">Portfolio</li>
+          <li className="nav__list__item">Contact</li>
         </ul>
         {/* <ul className="navbar__nav nav">
           {navLinks.map((link, index) => {

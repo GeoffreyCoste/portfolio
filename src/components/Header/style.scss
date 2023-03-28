@@ -18,11 +18,5 @@
     display: block;
     position: relative;
     z-index: 2;
-    &-light {
-      color: var(--primary);
-    }
-    &-dark {
-      color: var(--white);
-    }
   }
 }

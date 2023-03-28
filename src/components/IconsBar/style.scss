@@ -1,0 +1,31 @@
+.icons-bar {
+  width: 100%;
+  display: flex;
+  padding: 1rem 0;
+  &__list {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .list {
+    &__item {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      font-size: 1.5rem;
+      background-color: var(--orange);
+      border: 1px solid transparent;
+      border-radius: 50%;
+      &__link {
+        color: var(--white);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-top: 0.325rem;
+      }
+    }
+  }
+}

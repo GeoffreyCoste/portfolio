@@ -1,14 +1,13 @@
 .theme-toggler {
   cursor: pointer;
+  color: var(--white);
   &__light {
     width: 30px;
     height: auto;
     display: block;
-    color: var(--white);
   }
   &__dark {
     width: 30px;
     height: auto;
-    color: var(--primary);
   }
 }
