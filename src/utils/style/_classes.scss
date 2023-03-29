@@ -1,3 +1,5 @@
+@import './media-queries';
+
 .text-white {
   color: var(--white);
 }
@@ -62,6 +64,11 @@
   justify-content: center;
   padding-left: 1rem;
   padding-right: 1rem;
+  @include tablet {
+    max-width: 530px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   &__header {
     width: 100%;
     display: flex;
@@ -76,6 +83,11 @@
       width: 100px;
       position: absolute;
       right: 0;
+      @include tablet {
+        display: block;
+        position: initial;
+        margin-left: auto;
+      }
     }
     &__baseline {
       flex-basis: 100%;
@@ -96,5 +108,8 @@
   &__row {
     display: flex;
     flex-direction: row;
+    @include tablet {
+      margin-left: auto;
+    }
   }
 }
