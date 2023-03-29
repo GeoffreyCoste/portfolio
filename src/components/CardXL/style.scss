@@ -1,0 +1,85 @@
+.card {
+  flex-basis: 100%;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid;
+  &__header {
+    width: 100%;
+    /* position: relative;
+    &::after {
+      content: '';
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      aspect-ratio: 4/3;
+      background-color: var(--orange);
+      mix-blend-mode: hard-light;
+      opacity: 0.9;
+    } */
+    /* &__date {
+      font-size: 0.667rem;
+      font-weight: 700;
+      font-family: var(--font-secondary);
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+    } */
+    &__img {
+      width: 100%;
+      /* position: relative; */
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    &__title {
+      flex-basis: 100%;
+      font-size: 1.444rem;
+      margin: 0.125rem 0;
+    }
+    &__date {
+      flex-basis: 100%;
+      font-size: 0.667rem;
+      font-weight: 600;
+      font-family: var(--font-secondary);
+    }
+    &__resume {
+      flex-basis: 100%;
+      font-weight: 600;
+      line-height: 1.5rem;
+    }
+    &__badges {
+      margin: 0.25rem 0 1rem 0;
+      .badge {
+        font-family: var(--font-secondary);
+        font-weight: 600;
+        font-size: 0.556rem;
+      }
+    }
+    &__text {
+      font-size: 1rem;
+    }
+    &__buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .link {
+        font-size: 0.778rem;
+        font-weight: 700;
+        margin-right: auto;
+      }
+      .btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+        /* margin-left: 0.25rem; */
+        /* border-radius: 50%; */
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.section.section--hero {
+  .section__header {
+    &__baseline {
+      font-size: 0.75rem;
+      font-weight: 500;
+      font-family: var(--font-secondary);
+      text-transform: uppercase;
+    }
+    &__title {
+      flex-basis: 100%;
+    }
+  }
+}

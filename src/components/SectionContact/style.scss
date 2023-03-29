@@ -1,0 +1,16 @@
+.section.section--contact {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  .section__text__icon {
+    margin-right: 1rem;
+    font-size: 1.25rem;
+  }
+  .section__row {
+    margin-top: 1rem;
+    justify-content: flex-end;
+    .btn.btn--green-neon {
+      width: 63px;
+      margin-left: 0.75rem;
+    }
+  }
+}
