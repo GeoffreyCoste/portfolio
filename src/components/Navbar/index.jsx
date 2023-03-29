@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { selectTheme } from '../../app/selectors';
 import './style.scss';
@@ -22,6 +22,14 @@ const Navbar = () => {
   const handleClick = (index) => {
     setActiveLink(index);
   }; */
+
+  useEffect(() => {
+    if (isShown) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [isShown]);
 
   return (
     <nav className="navbar navbar-expand">

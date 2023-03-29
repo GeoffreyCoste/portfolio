@@ -1,3 +1,5 @@
+@import '../../utils/style/media-queries';
+
 .card {
   flex-basis: 100%;
   width: 100%;
@@ -68,10 +70,17 @@
       width: 100%;
       display: flex;
       align-items: center;
+      @include tablet {
+        justify-content: flex-end;
+      }
       .link {
         font-size: 0.778rem;
         font-weight: 700;
         margin-right: auto;
+        @include tablet {
+          font-size: 1rem;
+          margin-right: 0;
+        }
       }
       .btn {
         width: 40px;
@@ -79,6 +88,12 @@
         font-size: 1.25rem;
         /* margin-left: 0.25rem; */
         /* border-radius: 50%; */
+        @include tablet {
+          width: 63px;
+          height: 63px;
+          margin-left: 1.5rem;
+          margin-right: 0;
+        }
       }
     }
   }

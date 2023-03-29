@@ -6,7 +6,7 @@ import './style.scss';
 
 const SectionAbout = () => {
   return (
-    <section className="section section--about">
+    <section id="about" className="section section--about">
       <div className="section__header">
         <div className="section__header__index index">
           <One className="index__number" fill="#2bffb1" />

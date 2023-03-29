@@ -8,6 +8,9 @@ body {
   &.theme-dark {
     background-color: var(--blue-dark);
   }
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 span {

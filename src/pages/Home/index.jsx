@@ -1,6 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { selectTheme } from '../../app/selectors';
 import SectionHero from '../../components/SectionHero';
 import SectionAbout from '../../components/SectionAbout';
 import SectionSkills from '../../components/SectionSkills';
@@ -35,8 +33,6 @@ import SectionThanks from '../../components/SectionThanks';
 ]; */
 
 const Home = () => {
-  const theme = useSelector(selectTheme);
-
   return (
     <main className="main__home">
       <SectionHero />

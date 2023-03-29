@@ -1,3 +1,5 @@
+@import '../../utils/style/media-queries';
+
 .btn {
   font-family: var(--font-primary);
   background-color: transparent;
@@ -13,5 +15,10 @@
     color: var(--blue-dark);
     background-color: var(--green-neon);
     border-radius: 50px;
+    @include tablet {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
