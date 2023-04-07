@@ -1,8 +1,33 @@
+@import '../../utils/style/media-queries';
+
 .section.section--skills {
   padding-top: 12rem;
   padding-bottom: 12rem;
   .section__accordion {
     width: 100%;
     margin-top: 2rem;
+  }
+  .section__table {
+    width: 100%;
+    display: flex;
+    margin: 4rem 0;
+    position: relative;
+    border-top: 2px solid var(--border-blue);
+    .table__title {
+      position: absolute;
+      top: -2rem;
+      left: 0;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--blue-gray);
+      @include tablet {
+        top: 0.5rem;
+        color: var(--white);
+      }
+    }
+  }
+  .section__tabs {
+    width: 100%;
+    min-height: 650px;
   }
 }

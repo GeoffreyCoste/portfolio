@@ -1,4 +1,13 @@
 .section.section--about {
   padding-top: 12rem;
   padding-bottom: 12rem;
+  .section__text {
+    .text-white.text-bold {
+      font-size: 1rem;
+      cursor: pointer;
+      &:hover {
+        color: var(--green-neon);
+      }
+    }
+  }
 }

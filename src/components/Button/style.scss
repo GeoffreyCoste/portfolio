@@ -4,6 +4,9 @@
   font-family: var(--font-primary);
   background-color: transparent;
   border: 1px solid transparent;
+  @include desktop {
+    cursor: pointer;
+  }
   &--green-neon {
     width: 100%;
     height: 63px;
@@ -20,5 +23,15 @@
       margin-left: auto;
       margin-right: auto;
     }
+    /* @include desktop {
+      color: var(--blue);
+      background-color: var(--white);
+      transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
+      &:hover {
+        color: var(--blue-dark);
+        background-color: var(--green-neon);
+        transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
+      }
+    } */
   }
 }

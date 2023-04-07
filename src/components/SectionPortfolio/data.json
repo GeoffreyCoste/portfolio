@@ -1,0 +1,35 @@
+[
+  {
+    "number": "01",
+    "img": "/images/duotone.png",
+    "date": "1669935600000",
+    "name": "booki",
+    "description": "travel agency homepage",
+    "type": "frontend",
+    "demoUrl": "https://geoffreycoste.github.io/ocr_booki/",
+    "codeUrl": "https://github.com/GeoffreyCoste/ocr_booki",
+    "badges": ["HTML", "CSS"]
+  },
+  {
+    "number": "02",
+    "img": "/images/duotone.png",
+    "date": "1678057200000",
+    "name": "kasa",
+    "description": "a web app for property rental",
+    "type": "frontend",
+    "demoUrl": "https://geoffreycoste.github.io/ocr_booki/",
+    "codeUrl": "https://github.com/GeoffreyCoste/ocr_booki",
+    "badges": ["react", "react-router", "sass"]
+  },
+  {
+    "number": "03",
+    "img": "/images/duotone.png",
+    "date": "1678057200000",
+    "name": "kasa",
+    "description": "a web app for property rental",
+    "type": "frontend",
+    "demoUrl": "https://geoffreycoste.github.io/ocr_booki/",
+    "codeUrl": "https://github.com/GeoffreyCoste/ocr_booki",
+    "badges": ["react", "react-router", "sass"]
+  }
+]

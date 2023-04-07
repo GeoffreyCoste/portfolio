@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { selectTheme } from '../../app/selectors';
+import { selectTheme, selectDevice } from '../../app/selectors';
+import { scroller } from 'react-scroll';
 import './style.scss';
 
 /* const navLinks = [
@@ -14,14 +15,43 @@ import './style.scss';
   },
 ]; */
 
+const anchors = [
+  {
+    name: 'a propos',
+    id: 'about',
+  },
+  {
+    name: 'compétences',
+    id: 'skills',
+  },
+  {
+    name: 'portfolio',
+    id: 'portfolio',
+  },
+  {
+    name: 'contact',
+    id: 'contact',
+  },
+];
+
 const Navbar = () => {
   const [isShown, setIsShown] = useState(false);
+  const [active, setActive] = useState('');
   const theme = useSelector(selectTheme);
-  /* const [activeLink, setActiveLink] = useState('');
+  const device = useSelector(selectDevice);
 
-  const handleClick = (index) => {
-    setActiveLink(index);
-  }; */
+  /* const anchors = ['a propos', 'compétences', 'portfolio', 'contact']; */
+  /* const Element = Scroll.Element; */
+  /* const scroller = Scroll.scroller; */
+
+  const handleClick = (index, elementId) => {
+    setActive(index);
+    scroller.scrollTo(elementId, {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+    });
+  };
 
   useEffect(() => {
     if (isShown) {
@@ -51,28 +81,20 @@ const Navbar = () => {
         }`}
       >
         <ul className="nav__list">
-          <li className="nav__list__item">A propos</li>
-          <li className="nav__list__item">Compétences</li>
-          <li className="nav__list__item">Portfolio</li>
-          <li className="nav__list__item">Contact</li>
-        </ul>
-        {/* <ul className="navbar__nav nav">
-          {navLinks.map((link, index) => {
+          {anchors.map((anchor, index) => {
             return (
               <li
-                className="nav__item"
+                className={`nav__list__item${
+                  active === index ? ' active' : ''
+                }`}
                 key={`${index}-3226a4df-d85e-4088-8e5a-24a6830fa819`}
-                onClick={() => handleClick(index)}
+                onClick={() => handleClick(index, anchor.id)}
               >
-                <Navlink
-                  to={link.to}
-                  title={link.title}
-                  active={activeLink === index ? true : false}
-                />
+                {anchor.name}
               </li>
             );
           })}
-        </ul> */}
+        </ul>
       </div>
     </nav>
   );

@@ -1,7 +1,15 @@
 import React from 'react';
 import './style.scss';
 
-const Button = ({ children, type, color, modifier, onClick }) => {
+const Button = ({
+  children,
+  type,
+  color,
+  modifier,
+  onClick,
+  onEnter,
+  onLeave,
+}) => {
   return (
     <button
       type={type}
@@ -9,6 +17,8 @@ const Button = ({ children, type, color, modifier, onClick }) => {
         modifier ? ` btn--${modifier}` : ''
       }`}
       onClick={onClick}
+      onMouseEnter={onEnter}
+      onMouseLeave={onLeave}
     >
       {children}
     </button>

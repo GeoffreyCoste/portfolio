@@ -29,11 +29,8 @@
         &__text {
           display: flex;
           .text__index {
-            /* color: var(--orange); */
-            font-size: 0.778rem;
-            font-family: var(--font-secondary);
+            font-size: 1rem;
             font-weight: 800;
-            margin-top: 0.35rem;
             margin-right: 0.5rem;
           }
           .text__title {

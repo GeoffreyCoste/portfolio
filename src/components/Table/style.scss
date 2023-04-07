@@ -1,0 +1,57 @@
+@import '../../utils/style/media-queries';
+
+.table__block {
+  flex-basis: 100%;
+  border-collapse: collapse;
+  @include tablet {
+    flex-basis: 70%;
+    margin-left: auto;
+  }
+  .table-row {
+    display: block;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-blue);
+    .cell {
+      display: block;
+      &:first-child {
+        font-weight: 600;
+        @include desktop {
+          font-weight: 400;
+        }
+      }
+      &:not(:first-child) {
+        font-weight: 300;
+        margin-top: 0.25rem;
+      }
+    }
+    @include tablet {
+      &:first-child .cell {
+        padding-top: 0;
+      }
+    }
+    @include desktop {
+      display: flex;
+      .cell {
+        vertical-align: top;
+        padding: 1.5rem 0;
+        &:first-child {
+          width: 40%;
+          padding-right: 2rem;
+          .cell__text {
+            font-weight: 400;
+          }
+        }
+        &:nth-child(2) {
+          width: 40%;
+          padding-left: 3rem;
+          font-weight: 400;
+        }
+        &:last-child {
+          width: 20%;
+          text-align: end;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

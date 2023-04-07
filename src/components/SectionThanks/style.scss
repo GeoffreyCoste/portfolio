@@ -26,6 +26,9 @@
         @include tablet {
           width: 25%;
         }
+        @include desktop {
+          width: 12%;
+        }
         .st0 {
           fill: var(--white);
         }
@@ -37,6 +40,16 @@
         @include tablet {
           top: 27px;
           right: 14%;
+        }
+        @include desktop {
+          top: 75px;
+          right: 12.5%;
+          .text__green__neon {
+            font-size: 4rem;
+          }
+          .like-counter__number {
+            font-size: 2rem;
+          }
         }
       }
     }

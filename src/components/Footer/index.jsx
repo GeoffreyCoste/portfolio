@@ -1,33 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
-import { FaHeart, FaCodepen, FaBehance, FaLinkedinIn } from 'react-icons/fa';
-import { FiGithub, FiDribbble } from 'react-icons/fi';
+import { FaHeart } from 'react-icons/fa';
+import icons from './data.icons.json';
 import './style.scss';
 import IconsBar from '../IconsBar';
-
-const icons = [
-  {
-    path: '/',
-    Icon: FiGithub,
-  },
-  {
-    path: '/',
-    Icon: FaCodepen,
-  },
-  {
-    path: '/',
-    Icon: FiDribbble,
-  },
-  {
-    path: '/',
-    Icon: FaBehance,
-  },
-  {
-    path: '/',
-    Icon: FaLinkedinIn,
-  },
-];
 
 const Footer = () => {
   return (

@@ -36,10 +36,10 @@ const Home = () => {
   return (
     <main className="main__home">
       <SectionHero />
-      <SectionAbout />
-      <SectionSkills />
-      <SectionPortfolio />
-      <SectionContact />
+      <SectionAbout name="about" />
+      <SectionSkills name="skills" />
+      <SectionPortfolio name="portfolio" />
+      <SectionContact name="contact" />
       <SectionThanks />
       {/* {sections.map((section, index) => {
         return (

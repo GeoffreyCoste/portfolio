@@ -4,7 +4,7 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import Button from '../Button';
 import Badge from '../Badge';
 import img from '../../assets/pexels-darina-belonogova-7193155.jpg';
-import './style.scss';
+/* import './style.scss'; */
 
 const CardXL = () => {
   return (
