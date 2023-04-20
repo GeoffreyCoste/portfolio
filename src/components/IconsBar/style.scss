@@ -3,7 +3,8 @@
 .icons-bar {
   width: 100%;
   display: flex;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
+  padding-top: 1rem;
   @include tablet {
     margin-top: 1rem;
   }

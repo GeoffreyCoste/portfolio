@@ -1,12 +1,13 @@
 @import '../../utils/style/media-queries';
 
 .section.section--contact {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-  /* .section__text:last-of-type {
-    position: relative;
-    padding-left: 1.5rem;
-  } */
+  margin-top: 3rem;
+  padding-top: 5rem;
+  @include tablet {
+    .section__header__baseline {
+      margin-bottom: 0.25rem;
+    }
+  }
   .section__text {
     @include tablet {
       &:not(.text-email) {
@@ -15,24 +16,25 @@
     }
     @include desktop {
       &:not(.text-email) {
-        width: 1005%;
+        width: 600px;
       }
     }
     &.text-big {
       font-size: 1.25rem;
       font-weight: 800;
     }
+    .link {
+      text-decoration: none;
+    }
     .text-white.text-bold {
       font-size: 1rem;
+      text-decoration: none;
+      @include desktop {
+        &:hover {
+          color: var(--green-neon);
+        }
+      }
     }
-    /* &__icon {
-      margin-right: 1rem;
-      font-size: 1.25rem;
-      position: absolute;
-      top: 50%;
-      left: 30%;
-      transform: translateY(-40%);
-    } */
   }
   .section__row {
     width: 100%;
@@ -49,22 +51,49 @@
     }
     @include desktop {
       &.hover {
-        /* color: var(--blue);
-        background-color: var(--blue-light); */
         color: var(--green-neon);
         border: 2px solid var(--green-neon);
       }
     }
-    /* @include desktop {
-      &:has(.btn:hover) {
-        color: var(--blue);
+    &.clicked {
+      border: 2px solid var(--green-neon);
+      &::before {
+        content: '';
+        width: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
         background-color: var(--green-neon);
         border: 2px solid var(--green-neon);
-        &::after {
-          content: '';
+        border-radius: calc(var(--border-radius) - 3px);
+        animation: fill forwards 0.3s;
+        z-index: 9;
+      }
+      @keyframes fill {
+        0% {
+          width: 0;
+        }
+        50% {
+          width: 50%;
+        }
+        75% {
+          width: 75%;
+        }
+        100% {
+          width: 100%;
         }
       }
-    } */
+      .section__text {
+        width: 70%;
+        text-align: start;
+        padding-left: 0.5rem;
+        color: var(--blue-dark);
+        font-size: 1rem;
+        font-weight: 700;
+        z-index: 10;
+      }
+    }
     .text-email {
       width: 70%;
       font-size: 0.85rem;
@@ -72,6 +101,21 @@
       padding-left: 0.5rem;
       @include tablet {
         font-size: 1rem;
+      }
+    }
+    @include desktop {
+      .arrow-sliding {
+        animation: slide ease-in-out 1s infinite;
+      }
+      @keyframes slide {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+
+        50% {
+          transform: translate(10px, 0);
+        }
       }
     }
     .btn {
@@ -83,30 +127,49 @@
         &--copy-email.hover,
         &--open-email.hover {
           color: var(--green-neon);
-        }
-        /* &.hover + {
-          .btn--copy-email,
-          .btn--open-email {
-            color: var(--blue);
+          .btn__link {
+            color: var(--green-neon);
           }
-        } */
+        }
       }
-      &__icon {
+      &__link {
+        color: var(--green-neon);
+        @include desktop {
+          color: var(--white);
+        }
+      }
+      .icon {
         font-size: 1.5rem;
         @include tablet {
           font-size: 1.75rem;
         }
       }
     }
-    /* margin-top: 1rem;
-    justify-content: flex-end;
-    .btn.btn--green-neon {
-      width: 63px;
-      margin-left: 0.75rem;
-      @include tablet {
-        font-size: 1.25rem;
-        margin-left: 1.5rem;
+  }
+  .section__bottom {
+    height: 300px;
+    margin: 4rem 0;
+    position: relative;
+    &__img.img-animated {
+      width: 50%;
+      position: absolute;
+      right: 15%;
+      animation: rotation 10s linear infinite;
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        from {
+          transform: rotate(-360deg);
+        }
       }
-    } */
+      @include tablet {
+        width: 25%;
+        max-width: 270px;
+      }
+      .st0 {
+        fill: var(--white);
+      }
+    }
   }
 }

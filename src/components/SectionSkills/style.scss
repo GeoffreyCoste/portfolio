@@ -1,33 +1,200 @@
 @import '../../utils/style/media-queries';
 
 .section.section--skills {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-  .section__accordion {
-    width: 100%;
-    margin-top: 2rem;
-  }
-  .section__table {
-    width: 100%;
-    display: flex;
-    margin: 4rem 0;
-    position: relative;
-    border-top: 2px solid var(--border-blue);
-    .table__title {
-      position: absolute;
-      top: -2rem;
-      left: 0;
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--blue-gray);
-      @include tablet {
-        top: 0.5rem;
-        color: var(--white);
-      }
+  /* padding-top: 12rem;
+  padding-bottom: 12rem; */
+  margin-top: 3rem;
+  padding-top: 5rem;
+  .section__top {
+    &__left {
+      width: 50%;
     }
   }
-  .section__tabs {
-    width: 100%;
-    min-height: 650px;
+  .section__bottom {
+    .section__accordion {
+      width: 100%;
+      margin-top: 3rem;
+    }
+    .section__tabs {
+      width: 100%;
+      /* min-height: 650px; */
+    }
+    .section__table {
+      width: 100%;
+      display: flex;
+      margin: 7rem 0 0 0;
+      position: relative;
+      border-top: 2px solid var(--border-blue);
+      .table__title {
+        position: absolute;
+        top: -2rem;
+        left: 0;
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--blue-gray);
+        @include tablet {
+          top: 0.5rem;
+          color: var(--white);
+        }
+      }
+    }
+    .section__banner {
+      width: 100%;
+      display: flex;
+      .box {
+        width: 50%;
+        &__cards {
+          width: 150px;
+          height: 125px;
+          position: relative;
+          top: 50%;
+          &__layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            &-1 {
+              transform: translateX(125px) translateY(25px) translateZ(30px);
+              background: rgba(164, 255, 221, 0.2);
+              backdrop-filter: blur(5px);
+              -webkit-backdrop-filter: blur(5px);
+              /* border: 2px solid rgba(164, 255, 221, 0.7); */
+              border-radius: var(--border-radius);
+              box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            }
+            &-2 {
+              width: 250px;
+              height: 200px;
+              position: relative;
+              transform: translateX(150px) translateY(-150px) translateZ(60px);
+              background: rgba(164, 255, 221, 0.5);
+              /* border: 2px solid var(--green-neon); */
+              border-radius: var(--border-radius);
+              &::before {
+                content: '';
+                width: calc(100% + 20px);
+                height: calc(100% + 20px);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 2px solid var(--white);
+                border-radius: var(--border-radius);
+              }
+            }
+            &-3 {
+              transform: translateX(50px) translateY(-25px) translateZ(30px);
+              background: rgba(164, 255, 221, 0.6);
+              backdrop-filter: blur(5px);
+              -webkit-backdrop-filter: blur(5px);
+              /* border: 2px solid rgba(164, 255, 221, 0.7); */
+              border-radius: var(--border-radius);
+              box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            }
+            &__header {
+              padding: 10px;
+              .dots {
+                display: flex;
+                &__item {
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 5px;
+                  background-color: var(--blue);
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+        }
+        &__sprite {
+          &__anim {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 420px;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-image: url('../../assets/laptop_sprite.png');
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+          }
+        }
+      }
+    }
+    .section__sprite {
+      &-anim {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 420px;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        background-image: url('../../assets/laptop_sprite.png');
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        .popups-items {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border: 1px solid #fff;
+          &__cards {
+            width: 150px;
+            height: 125px;
+            position: relative;
+            top: 50%;
+            .cards__layer {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              &-1 {
+                transform: translateX(-125px) translateY(40px) translateZ(30px);
+                background: rgba(164, 255, 221, 0.2);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 2px solid rgba(164, 255, 221, 0.7);
+                border-radius: var(--border-radius);
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+              }
+              &-2 {
+                width: 250px;
+                height: 200px;
+                transform: translateX(-200px) translateY(-125px)
+                  translateZ(60px);
+                background-color: var(--green-neon);
+                /* border: 2px solid var(--green-neon); */
+                border-radius: var(--border-radius);
+              }
+              &-3 {
+                transform: translateX(-25px) translateY(-175px) translateZ(30px);
+                background: rgba(164, 255, 221, 0.6);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 2px solid rgba(164, 255, 221, 0.7);
+                border-radius: var(--border-radius);
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+              }
+              &__header {
+                padding: 10px;
+                .dots {
+                  display: flex;
+                  &__item {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 5px;
+                    background-color: var(--blue);
+                    border-radius: 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

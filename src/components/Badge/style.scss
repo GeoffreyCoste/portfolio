@@ -1,9 +1,11 @@
+@import '../../utils/style/media-queries';
+
 .badge {
   display: inline-block;
   margin-right: 0.5rem;
   padding: 0.125rem 0.45rem;
   font-family: var(--font-primary);
-  font-size: 0.778rem;
+  font-size: 0.6rem;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -11,4 +13,7 @@
   background-color: transparent;
   border: 2px solid;
   border-radius: 20px;
+  @include desktop {
+    font-size: 0.778rem;
+  }
 }

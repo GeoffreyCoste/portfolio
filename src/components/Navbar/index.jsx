@@ -4,17 +4,6 @@ import { selectTheme, selectDevice } from '../../app/selectors';
 import { scroller } from 'react-scroll';
 import './style.scss';
 
-/* const navLinks = [
-  {
-    title: 'A propos',
-    to: '/',
-  },
-  {
-    title: 'A propos',
-    to: '/about',
-  },
-]; */
-
 const anchors = [
   {
     name: 'a propos',
@@ -40,12 +29,9 @@ const Navbar = () => {
   const theme = useSelector(selectTheme);
   const device = useSelector(selectDevice);
 
-  /* const anchors = ['a propos', 'compétences', 'portfolio', 'contact']; */
-  /* const Element = Scroll.Element; */
-  /* const scroller = Scroll.scroller; */
-
   const handleClick = (index, elementId) => {
     setActive(index);
+    setIsShown(false);
     scroller.scrollTo(elementId, {
       duration: 1500,
       delay: 100,

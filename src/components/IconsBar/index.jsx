@@ -28,7 +28,12 @@ const IconsBar = ({ icons }) => {
               key={`${index}-c0530c55-9f12-4d8b-b357-008ec5116564`}
               className="list__item"
             >
-              <Link to={path} className="list__item__link link">
+              <Link
+                to={path}
+                className="list__item__link link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <ReactIconsSelector iconName={name} />
               </Link>
             </li>

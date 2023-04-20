@@ -1,10 +1,11 @@
 [
   {
     "number": "01",
-    "img": "/images/duotone.png",
+    "img": "/images/booki_project_cover.jpg",
     "date": "1669935600000",
     "name": "booki",
-    "description": "travel agency homepage",
+    "resume": "Projet issu de la formation OpenClassrooms consistant à réaliser une page d'accueil d'agence de voyage.",
+    "description": "Ce projet est issu de la formation OpenClassrooms et consistait à réaliser une page d'accueil d'agence de voyage. Il s'articule autour de l'usage du CSS et notamment de la méthode 'flexbox' permettant de distribuer l'espace entre des objets d'une interface ainsi que de les aligner.",
     "type": "frontend",
     "demoUrl": "https://geoffreycoste.github.io/ocr_booki/",
     "codeUrl": "https://github.com/GeoffreyCoste/ocr_booki",
@@ -12,10 +13,11 @@
   },
   {
     "number": "02",
-    "img": "/images/duotone.png",
+    "img": "/images/kasa_project_cover.jpg",
     "date": "1678057200000",
     "name": "kasa",
-    "description": "a web app for property rental",
+    "resume": "Projet issu de la formation OpenClassrooms consistant à réaliser une application web de location immobilière.",
+    "description": "Ce projet est issu de la formation OpenClassrooms et consistait à réaliser une application web de location immobilière avec React.",
     "type": "frontend",
     "demoUrl": "https://geoffreycoste.github.io/ocr_booki/",
     "codeUrl": "https://github.com/GeoffreyCoste/ocr_booki",
@@ -23,13 +25,14 @@
   },
   {
     "number": "03",
-    "img": "/images/duotone.png",
-    "date": "1678057200000",
-    "name": "kasa",
-    "description": "a web app for property rental",
+    "img": "/images/sophie_bluel_project_cover.png",
+    "date": "1672863460000",
+    "name": "Sophie Bluel",
+    "resume": "Projet issu de la formation OpenClassrooms consistant à créer une page web dynamique avec JavaScript.",
+    "description": "Ce projet est issu de la formation OpenClassrooms et consistait à créer une page web dynamique avec JavaScript. Il s'agissait notamment de recourir à différents types de requêtes serveurs pour réaliser des opérations CRUD, à manipuler le DOM ou encore à gérer des événements utilisateurs.",
     "type": "frontend",
-    "demoUrl": "https://geoffreycoste.github.io/ocr_booki/",
-    "codeUrl": "https://github.com/GeoffreyCoste/ocr_booki",
-    "badges": ["react", "react-router", "sass"]
+    "demoUrl": "",
+    "codeUrl": "https://github.com/GeoffreyCoste/ocr_portfolio_archi",
+    "badges": ["HTML", "CSS", "JavaScript"]
   }
 ]

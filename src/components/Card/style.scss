@@ -1,79 +1,183 @@
 @import '../../utils/style/media-queries';
 
 .card {
-  flex-basis: 100%;
-  width: 100%;
+  flex-basis: 90%;
+  /* height: 350px; */
+  aspect-ratio: 2/3;
+  position: relative;
   margin-bottom: 1rem;
-  &__header {
-    width: 100%;
-    display: flex;
-    position: relative;
-    &__number {
-      position: absolute;
-      bottom: -2.75rem;
-      left: 1rem;
-      font-weight: 800;
-      font-size: 6rem;
+  /* padding: 1rem; */
+  border: 2px solid var(--white);
+  border-radius: var(--border-radius);
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+  @include tablet {
+    flex-basis: 47.5%;
+    max-height: 400px;
+  }
+  @include desktop {
+    flex-basis: 30%;
+    aspect-ratio: 1/2;
+    max-height: 440px;
+    &:hover .card__face-front:hover::after,
+    /* &:hover .card__face-front .content__header:hover, */
+    &:hover .card__face-front:hover .card__face-front__img {
+      filter: none;
+      -webkit-filter: none;
+      mix-blend-mode: unset !important;
+      background: transparent;
     }
-    &__img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      @include tablet {
-        border-top-left-radius: var(--border-radius);
-        border-top-right-radius: var(--border-radius);
-      }
+    &:hover .card__face-front .card__face__content {
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.5) 25%,
+        rgba(0, 0, 0, 0) 100%
+      );
     }
   }
-  &__body {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 1rem 1rem 1rem;
-    border-bottom: 3px solid;
-    @include tablet {
-      border-bottom: 2px solid;
-      border-left: 2px solid;
-      border-right: 2px solid;
-      border-bottom-left-radius: var(--border-radius);
-      border-bottom-right-radius: var(--border-radius);
-    }
-    .box {
-      display: flex;
-      flex-wrap: wrap;
-      &:last-of-type {
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-top: 2rem;
+  &.flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+  &__face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: calc(var(--border-radius) - 2px);
+    backface-visibility: hidden;
+    &-front {
+      background-color: var(--green-neon);
+      @include tablet {
+        overflow: hidden;
       }
-      &__date {
-        flex-basis: 100%;
-        font-size: 0.889rem;
-        font-weight: 700;
-        text-align: end;
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: calc(var(--border-radius) - 2px);
+        background-color: #23278a;
+        mix-blend-mode: lighten;
       }
-      &__title {
-        flex-basis: 100%;
-        margin-top: 2rem;
-        font-size: 2rem;
-        font-weight: 800;
-        &::first-letter {
-          text-transform: uppercase;
+      &__img {
+        width: 100%;
+        aspect-ratio: 2/3;
+        object-fit: cover;
+        border-radius: calc(var(--border-radius) - 2px);
+        mix-blend-mode: multiply;
+        -webkit-filter: grayscale(100%) contrast(1.2);
+        filter: grayscale(100%) contrast(1);
+        @include tablet {
+          max-height: 398px;
+        }
+        @include desktop {
+          aspect-ratio: 1/2;
+          max-height: 438px;
         }
       }
-      &__description::first-letter {
-        text-transform: uppercase;
+      .content {
+        &__row {
+          flex-basis: 50%;
+        }
       }
-      &__buttons {
-        width: 100%;
+    }
+    /* &-front {
+      .content {
+        &__row {
+          flex-basis: 50%;
+        }
+      }
+    } */
+    &-back {
+      transform: rotateY(180deg);
+      z-index: 41;
+      .content {
+        justify-content: space-between;
+        &__row {
+          flex-wrap: wrap;
+          &__date {
+            width: 100%;
+            text-align: end;
+            font-size: 0.75rem;
+            @include desktop {
+              font-size: 0.889rem;
+            }
+          }
+          &__title {
+            flex-basis: 100%;
+            text-align: center;
+            margin: 1.5rem 0;
+          }
+          &__badges {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+          }
+          &__description {
+            font-size: 0.8rem;
+            line-height: 1.15rem;
+            margin-top: 1.5rem;
+          }
+        }
+      }
+    }
+    .content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 1rem 1.5rem;
+      background: linear-gradient(
+        0deg,
+        rgba(66, 15, 231, 1) 0%,
+        rgba(66, 15, 231, 0.5) 25%,
+        rgba(66, 15, 231, 0) 100%
+      );
+      border-radius: calc(var(--border-radius) - 2px);
+      &__row {
         display: flex;
         justify-content: flex-end;
-        .btn {
-          width: 40px;
-          height: 40px;
-          font-size: 2rem;
-          margin-left: 1rem;
-          &__icon {
-            color: var(--white);
+        align-items: flex-end;
+        border-radius: calc(var(--border-radius) - 1px);
+        z-index: 40;
+        &__title {
+          width: 100%;
+          text-align: center;
+          font-size: 1.75rem;
+          font-weight: 800;
+          text-shadow: 2px 2px 8px rgba(24, 3, 60, 0.6);
+          @include desktop {
+            font-size: 2rem;
+            margin-top: 0.5rem;
+          }
+          &::first-letter {
+            text-transform: uppercase;
+          }
+        }
+        &__buttons {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          border-radius: calc(var(--border-radius) - 1px);
+          .btn {
+            margin-left: 1rem;
+            &__icon {
+              font-size: 1.5rem;
+              color: var(--white);
+              @include desktop {
+                font-size: 2rem;
+                &:hover {
+                  color: var(--green-neon);
+                }
+              }
+            }
           }
         }
       }

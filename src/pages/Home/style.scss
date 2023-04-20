@@ -1,3 +1,8 @@
+@import '../../utils/style/media-queries';
+
 .main__home {
   padding-top: 100px;
+  @include desktop {
+    padding-top: 0;
+  }
 }

@@ -98,6 +98,18 @@
       left: 0;
       z-index: 1;
       transition: height ease-in-out 0.3s;
+      &.nav--light {
+        background-color: var(--blue);
+        @include desktop {
+          background-color: transparent;
+        }
+      }
+      &.nav--dark {
+        background-color: var(--blue-dark);
+        @include desktop {
+          background-color: transparent;
+        }
+      }
       &:not(.show) {
         height: 0;
         transition: height ease-in-out 0.3s;

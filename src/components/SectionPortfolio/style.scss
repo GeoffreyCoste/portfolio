@@ -1,76 +1,109 @@
 @import '../../utils/style/media-queries';
 
 .section.section--portfolio {
-  padding: 12rem 0;
-  .section__header {
+  /* padding: 12rem 0; */
+  margin-top: 3rem;
+  padding-top: 5rem;
+  /* .section__header {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-  .section__cards {
-    width: 100%;
+  } */
+  .section__bottom {
+    /* width: 100%; */
+
+    /* margin-left: 1rem;
+    margin-right: 1rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 2rem;
+    /* border: 2px solid yellow; */
     @include tablet {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .card {
-        flex-basis: 40%;
-        &:first-child {
-          /* align-self: flex-end; */
-          margin-left: 60%;
-          margin-bottom: 0;
-        }
-        &:nth-child(2) {
-          margin: 3rem 30%;
-        }
-        /* &:first-child {
-          /* flex-basis: 60%; *
-          flex-basis: 60%;
-          align-self: flex-end;
-          margin: 0 0 180px auto;
-        }
-        &:nth-child(2) {
-          /* flex-basis: 60%; *
-          flex-basis: 70%;
-          margin-bottom: 130px;
-        }
-        &:nth-child(3) {
-          /* flex-basis: 35%; *
-          flex-basis: 50%;
-          align-self: flex-end;
-        }
-        &:nth-child(4) {
-          flex-basis: 50%;
-          margin: 80px 0 180px 0;
-        } */
+      padding-top: 3rem;
+      column-gap: 5%;
+      .card:last-of-type {
+        margin-right: auto;
       }
     }
-    /* @include desktop {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    @include desktop {
+      /* justify-content: flex-end; */
+      column-gap: 5%;
       .card {
-        &:first-child {
-          /* flex-basis: 60%; *
-          flex-basis: 50%;
-          align-self: flex-end;
-          margin: 0 0 180px 550px;
+        /* margin-right: auto; */
+        margin-bottom: 3rem;
+        /* &:first-of-type {
+          margin-left: 30%;
+        } */
+        &-invisible {
+          opacity: 0;
         }
-        &:nth-child(2) {
-          /* flex-basis: 60%; *
-          flex-basis: 50%;
-          margin-bottom: 130px;
-        }
-        &:nth-child(3) {
-          /* flex-basis: 35%; *
-          flex-basis: 50%;
-          align-self: flex-end;
-        }
-        &:nth-child(4) {
-          flex-basis: 50%;
-          margin: 80px 0 180px 0;
+        &:last-of-type {
+          margin-right: auto;
         }
       }
-    } */
+    }
+    &__title {
+      flex-basis: 100%;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--blue-gray);
+      padding-bottom: 1rem;
+      margin: 0 1rem 2rem 1rem;
+      border-bottom: 1px solid var(--border-blue);
+      @include tablet {
+        flex-basis: 100%;
+        color: var(--white);
+        font-size: 2rem;
+        /* text-align: center; */
+        margin: 0;
+        border: none;
+        position: relative;
+        /* margin-bottom: 2rem; */
+        &::after {
+          content: '';
+          width: 30%;
+          height: 8px;
+          position: absolute;
+          top: -1.25rem;
+          left: 0;
+          background-color: var(--white);
+          border-radius: var(--border-radius);
+        }
+      }
+      @include desktop {
+        flex-basis: 30%;
+        color: var(--white);
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+        border: none;
+        position: relative;
+        &::after {
+          content: '';
+          width: 30%;
+          height: 10px;
+          position: absolute;
+          top: -1.5rem;
+          left: 1rem;
+          background-color: var(--white);
+          border-radius: var(--border-radius);
+        }
+      }
+    }
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding: 0 0 1rem 1rem;
+      border-color: var(--green-neon);
+      .card__text {
+        flex-basis: 55%;
+        font-size: 2rem;
+        font-weight: 700;
+        .text-green-neon {
+          font-size: 2rem;
+        }
+      }
+    }
   }
 }
