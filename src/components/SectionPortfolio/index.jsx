@@ -7,6 +7,7 @@ import projects from './data.json';
 import './style.scss';
 
 const SectionPortfolio = () => {
+  // Anim section title, cards block due to scroll
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.utils.toArray('.gsap__reveal').forEach((elem) => {

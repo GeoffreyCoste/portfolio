@@ -13,8 +13,9 @@ import './style.scss';
 
 const SectionHero = () => {
   const device = useSelector(selectDevice);
-  const [scroll, setScroll] = useState(0);
+  const [scroll, setScroll] = useState(0); // Tracing vertical scroll value
 
+  // Handle anchors smooth scroll
   const handleClick = (elementId) => {
     scroller.scrollTo(elementId, {
       duration: 1500,
@@ -34,12 +35,6 @@ const SectionHero = () => {
   return (
     <section className="section section--hero">
       <div className="section__header">
-        {/* <p className="section__header__name">Geoffrey Coste</p>
-        <p className="section__header__title title-start">creative</p>
-        <p className="section__header__title title-end">
-          {device === 'small' ? 'dev.' : 'developer'}
-        </p>
-        <p className="section__header__grade">junior</p> */}
         <TextBanner className="section__header__text-banner pt-2" />
       </div>
       <p className="section__text text-white text-mb pt-2 pl-1">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { selectTheme, selectDevice } from '../../app/selectors';
+import { selectTheme } from '../../app/selectors';
 import { scroller } from 'react-scroll';
 import './style.scss';
 
@@ -27,8 +27,8 @@ const Navbar = () => {
   const [isShown, setIsShown] = useState(false);
   const [active, setActive] = useState('');
   const theme = useSelector(selectTheme);
-  const device = useSelector(selectDevice);
 
+  // Handle anchors smooth scroll
   const handleClick = (index, elementId) => {
     setActive(index);
     setIsShown(false);
@@ -39,6 +39,7 @@ const Navbar = () => {
     });
   };
 
+  // Enable body scroll when mobile menu not opened
   useEffect(() => {
     if (isShown) {
       document.body.classList.add('no-scroll');

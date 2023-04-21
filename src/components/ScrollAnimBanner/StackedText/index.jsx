@@ -17,6 +17,7 @@ const StackedText = () => {
   const wordElem3 = useRef();
   const wordElem4 = useRef();
 
+  // Anim text layers due to scroll
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let tl = gsap.timeline({

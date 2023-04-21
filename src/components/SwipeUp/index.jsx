@@ -3,7 +3,7 @@ import ArrowWave from '../ArrowWave';
 import './style.scss';
 
 const SwipeUp = () => {
-  const [scroll, setScroll] = useState(0);
+  const [scroll, setScroll] = useState(0); // Tracing vertical scroll
 
   const handleScroll = () => {
     setScroll(window.scrollY);

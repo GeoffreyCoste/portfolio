@@ -3,17 +3,10 @@
 .icons-bar {
   width: 100%;
   display: flex;
-  /* padding: 1rem 0; */
   padding-top: 1rem;
   @include tablet {
     margin-top: 1rem;
   }
-  /* @include desktop {
-    flex-direction: column;
-    position: fixed;
-    left: 1rem;
-    bottom: 2rem;
-  } */
   &__list {
     flex-basis: 100%;
     display: flex;

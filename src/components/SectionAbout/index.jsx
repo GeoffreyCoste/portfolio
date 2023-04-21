@@ -20,6 +20,7 @@ const SectionAbout = () => {
   const theme = useSelector(selectTheme);
   const device = useSelector(selectDevice);
 
+  // Handle anchors smooth scroll
   const handleScroll = (elementId) => {
     scroller.scrollTo(elementId, {
       duration: 1500,
@@ -28,6 +29,7 @@ const SectionAbout = () => {
     });
   };
 
+  // Img parallax effect on scroll
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.to('.section__design__img', {
@@ -44,6 +46,7 @@ const SectionAbout = () => {
     return () => ctx.revert();
   });
 
+  // Anim section title and text due to scroll
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.utils.toArray('.gsap__reveal').forEach((elem) => {

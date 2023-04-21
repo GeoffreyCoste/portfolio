@@ -15,80 +15,6 @@
         width: 70%;
       }
     }
-
-    /* &__name {
-      flex-basis: 100%;
-      font-size: 1.444rem;
-      font-weight: 200;
-      padding-left: 1.5rem;
-      @include desktop {
-        padding-left: 3rem;
-      }
-    }
-    &__title {
-      font-size: 3.167rem;
-      font-weight: 900;
-      line-height: 3.167rem;
-      padding-left: 1.5rem;
-      position: relative;
-      @include tablet {
-        flex-basis: 100%;
-      }
-      &.title-start::before {
-        content: '<';
-        color: var(--green-neon);
-        font-size: 3.167rem;
-        font-weight: 900;
-        position: absolute;
-        top: -0.25rem;
-        left: -0.25rem;
-      }
-      &.title-end {
-        padding-left: 3.622rem;
-        @include tablet {
-          flex-basis: auto;
-        }
-        &::after {
-          content: '/>';
-          color: var(--green-neon);
-          font-size: 3.167rem;
-          font-weight: 900;
-          position: absolute;
-          top: 0;
-          right: -4.25rem;
-          @include tablet {
-            right: -4.5rem;
-          }
-        }
-      }
-    }
-    &__grade {
-      font-size: 0.778rem;
-      font-weight: 800;
-      position: absolute;
-      top: 6rem;
-      left: 1.5rem;
-      transform: rotate(-90deg);
-    }
-    @include desktop {
-      &__name {
-        font-size: 4rem;
-      }
-      &__title {
-        font-size: 7rem;
-        line-height: 7rem;
-        padding-left: 1.5rem;
-        &.title-end {
-          padding-left: 6.125rem;
-        }
-      }
-      &__grade {
-        font-size: 1.75rem;
-        top: 14rem;
-        left: 1.5rem;
-        transform: rotate(-90deg);
-      }
-    } */
   }
   @include tablet {
     .icons-bar {
@@ -116,7 +42,6 @@
   @include desktop {
     .btn--green-neon {
       width: 25%;
-      /* margin-left: 2rem; */
     }
     .icons-bar {
       width: auto;

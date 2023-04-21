@@ -61,15 +61,5 @@
         }
       }
     }
-    /* @include desktop {
-      color: var(--blue);
-      background-color: var(--white);
-      transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
-      &:hover {
-        color: var(--blue-dark);
-        background-color: var(--green-neon);
-        transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
-      }
-    } */
   }
 }

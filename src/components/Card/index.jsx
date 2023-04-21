@@ -9,18 +9,8 @@ import './style.scss';
 const Card = ({ data }) => {
   const [flip, setFlip] = useState(false);
 
-  const {
-    number,
-    img,
-    date,
-    name,
-    resume,
-    description,
-    type,
-    demoUrl,
-    codeUrl,
-    badges,
-  } = data;
+  const { img, date, name, resume, description, demoUrl, codeUrl, badges } =
+    data;
 
   const frenchDate = (timestamp) => {
     const newDate = new Date(parseInt(timestamp));

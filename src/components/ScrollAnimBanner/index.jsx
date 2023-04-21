@@ -11,6 +11,7 @@ const ScrollAnimBanner = () => {
   const wordLeft = useRef();
   const wordRight = useRef();
 
+  // Anim text on scroll
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.utils.toArray('.banner__side-word').forEach((word) => {
