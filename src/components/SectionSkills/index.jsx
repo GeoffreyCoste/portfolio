@@ -5,11 +5,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { hide, animateFrom } from '../../utils/helpers/ScrollReveal';
 import { ReactComponent as Two } from '../../assets/2.svg';
-/* import { ReactComponent as LaptopFrame1 } from '../../assets/laptop-1.svg';
-import { ReactComponent as LaptopFrame2 } from '../../assets/laptop-2.svg';
-import { ReactComponent as LaptopFrame3 } from '../../assets/laptop-3.svg';
-import { ReactComponent as LaptopFrame4 } from '../../assets/laptop-4.svg';
-import { ReactComponent as LaptopFrame5 } from '../../assets/laptop-5.svg'; */
 import Accordion from '../Accordion';
 import Tabs from '../Tabs';
 import Table from '../Table';
@@ -23,46 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 const SectionSkills = () => {
   const device = useSelector(selectDevice);
 
-  /* useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.set('.section__laptop__frame', { autoAlpha: 0 });
-
-      let frames = gsap.utils.toArray('.section__laptop__frame');
-
-      let totalDuration = 1000;
-      let singleDuration = totalDuration / frames.length;
-
-      let tl = gsap.timeline();
-
-      frames.forEach((frame, i) => {
-        /* let tl = gsap.timeline(); *
-        const framesContainer = document.querySelector('.section__laptop');
-        const activeFrame = framesContainer.querySelector(
-          '.section__laptop__frame.frame-' + i
-        );
-
-        ScrollTrigger.create({
-          trigger: '.section--skills',
-          start: 'top -=' + singleDuration * i,
-          end: '+=' + singleDuration,
-          /* pin: true,
-          scrub: true, *
-          scrub: true,
-          animation: tl,
-          /* toggleActions: 'play reverse play reverse', *
-          markers: true,
-        });
-
-        tl.to(frame, { duration: 0.25 }, 0).set(
-          activeFrame,
-          { autoAlpha: 1 },
-          0
-        );
-      });
-    });
-    return () => ctx.revert();
-  }); */
-
+  // Anim section title, tabs and table blocks due to scroll
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.utils.toArray('.gsap__reveal').forEach((elem) => {
@@ -87,50 +43,6 @@ const SectionSkills = () => {
     });
     return () => ctx.revert();
   });
-
-  /* useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      let frame_count = 4,
-        offset_value = 420;
-
-      gsap.to('.section__sprite-anim', {
-        backgroundPosition: -offset_value * frame_count + 'px',
-        ease: 'steps(' + frame_count + ')', // use a stepped ease for the sprite sheet
-        scrollTrigger: {
-          trigger: '.section__sprite-anim',
-          start: 'top top',
-          end: '+=' + frame_count * offset_value,
-          pin: true,
-          scrub: true,
-          /* pinSpacing: false, *
-          markers: true,
-        },
-      });
-    });
-    return () => ctx.revert();
-  }); */
-
-  /* useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      let frame_count = 4,
-        offset_value = 420;
-
-      gsap.to('.box__sprite__anim', {
-        backgroundPosition: -offset_value * frame_count + 'px',
-        ease: 'steps(' + frame_count + ')', // use a stepped ease for the sprite sheet
-        scrollTrigger: {
-          trigger: '.section__banner',
-          start: 'top top',
-          end: '+=' + frame_count * offset_value,
-          pin: true,
-          scrub: true,
-          /* pinSpacing: false, *
-          markers: true,
-        },
-      });
-    });
-    return () => ctx.revert();
-  }); */
 
   return (
     <section id="skills" className="section section--skills">
@@ -166,55 +78,6 @@ const SectionSkills = () => {
           <span className="table__title">Diplômes</span>
           <Table items={diplomas} />
         </div>
-        {/* {device === 'large' && (
-          <div className="section__banner">
-            <div className="section__banner__box box">
-              <div className="box__cards">
-                <div className="box__cards__layer box__cards__layer-1">
-                  layer1
-                </div>
-                <div className="box__cards__layer box__cards__layer-2">
-                  <div className="box__cards__layer__header">
-                    <div className="dots">
-                      <div className="dots__item"></div>
-                      <div className="dots__item"></div>
-                      <div className="dots__item"></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="box__cards__layer box__cards__layer-3">
-                  layer3
-                </div>
-              </div>
-            </div>
-            <div className="section__banner__box box">
-              <div className="box__sprite">
-                <div className="box__sprite__anim"></div>
-              </div>
-            </div>
-          </div>
-        )} */}
-        {/* {device === 'large' && (
-          <div className="section__sprite">
-            <div className="section__sprite-anim" ref={pinRef}>
-              <div className="sprite-anim__popups popups-items">
-                <div className="popups-items__cards">
-                  <div className="cards__layer cards__layer-1">layer1</div>
-                  <div className="cards__layer cards__layer-2">
-                    <div className="cards__layer__header">
-                      <div className="dots">
-                        <div className="dots__item"></div>
-                        <div className="dots__item"></div>
-                        <div className="dots__item"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="cards__layer cards__layer-3">layer3</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )} */}
       </div>
     </section>
   );

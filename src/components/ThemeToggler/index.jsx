@@ -17,17 +17,9 @@ const ThemeToggler = () => {
   return (
     <button type="button" className="btn btn-theme-toggler theme-toggler">
       {theme === 'light' ? (
-        <BiMoon
-          className="theme-toggler__dark"
-          onClick={() => toggleTheme()}
-          /* onClick={() => dispatch(themeActions.toggle())} */
-        />
+        <BiMoon className="theme-toggler__dark" onClick={() => toggleTheme()} />
       ) : (
-        <BiSun
-          className="theme-toggler__light"
-          onClick={() => toggleTheme()}
-          /* onClick={() => dispatch(themeActions.toggle())} */
-        />
+        <BiSun className="theme-toggler__light" onClick={() => toggleTheme()} />
       )}
     </button>
   );

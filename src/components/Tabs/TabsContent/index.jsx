@@ -65,57 +65,6 @@ const TabsContent = ({ items, active }) => {
             </div>
           </div>
         );
-
-        /* return active === id ? (
-          <>
-            <div className="wrapper wrapper-1">
-              <div className="wrapper__child wrapper-col index">
-                <p className="index__text">{`0${parseInt(id)}`}</p>
-              </div>
-              <div className="wrapper__child wrapper-col text">
-                <h4 className="text__title">{title}</h4>
-                <p className="text__paragraph">{description.intro}</p>
-                <ul className="text__list">
-                  {description.list.map((el, index) => (
-                    <li
-                      key={`${index}-442fef32-a4c9-46bd-8cbb-2cadc5dfd365`}
-                      className="text__list__item"
-                    >
-                      {el}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="wrapper wrapper-2 wrapper-col">
-              <ul className="tech__list">
-                {technologies.map((item, index) => {
-                  const { title, icons } = item;
-
-                  return (
-                    <li
-                      key={`${index}-442fef32-a4c9-46bd-8cbb-2cadc5dfd365`}
-                      className="tech__list__item item"
-                    >
-                      <p className="item__title">{title}</p>
-                      <ul className="item__icons icons"></ul>
-                      {icons.map((Icon, index) => (
-                        <li
-                          key={`${index}-fa990f0c-7819-462d-9c5e-457e768218a3`}
-                          className="icons__item"
-                        >
-                          <Icon />
-                        </li>
-                      ))}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </>
-        ) : (
-          ''
-        ); */
       })}
     </>
   );
