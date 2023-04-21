@@ -1,6 +1,8 @@
 @import '../../utils/style/media-queries';
 
 .section.section--hero {
+  min-height: 100vh;
+  justify-content: center;
   @include tablet {
     padding: 3rem 0;
   }
