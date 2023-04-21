@@ -1,0 +1,49 @@
+@import '../../../utils/style/media-queries';
+
+.stacked-text {
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  position: relative;
+  margin: 3rem 0;
+  @include tablet {
+    flex-basis: 50%;
+    margin: 0;
+  }
+  @include desktop {
+    flex-basis: 40%;
+  }
+  &__word {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--white);
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 0.8;
+    text-transform: uppercase;
+    &.word-light {
+      background-color: var(--blue);
+    }
+    &.word-dark {
+      background-color: var(--blue-dark);
+    }
+    &.word-main {
+      color: var(--green-neon);
+      z-index: 10;
+    }
+    &.word-layer-1 {
+      z-index: 8;
+    }
+    &.word-layer-2 {
+      z-index: 9;
+    }
+    &.word-layer-3 {
+      z-index: 9;
+    }
+    &.word-layer-4 {
+      z-index: 8;
+    }
+  }
+}

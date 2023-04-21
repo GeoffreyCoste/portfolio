@@ -1,3 +1,5 @@
+@import '../../utils/style/media-queries';
+
 .navbar {
   /* width: 100%; */
   /* position: relative; */
@@ -23,6 +25,9 @@
       transition: 0.5s ease-in-out;
       cursor: pointer;
       z-index: 2;
+      @include desktop {
+        display: none;
+      }
       &.close {
         .toggler__bar {
           &:nth-child(1) {
@@ -93,26 +98,68 @@
       left: 0;
       z-index: 1;
       transition: height ease-in-out 0.3s;
+      &.nav--light {
+        background-color: var(--blue);
+        @include desktop {
+          background-color: transparent;
+        }
+      }
+      &.nav--dark {
+        background-color: var(--blue-dark);
+        @include desktop {
+          background-color: transparent;
+        }
+      }
       &:not(.show) {
         height: 0;
         transition: height ease-in-out 0.3s;
+        @include desktop {
+          height: auto;
+          position: initial;
+        }
         .nav__list {
           opacity: 0;
           transform: translateY(-50%);
           transition: opacity ease-in-out 0.3s;
+          @include desktop {
+            display: flex;
+            transform: none;
+            opacity: 1;
+            &__item {
+              position: relative;
+              margin: 0 2rem;
+              padding: 0;
+              cursor: pointer;
+              transition: color ease-in-out 0.3s;
+              &::after {
+                content: '';
+                width: 0;
+                height: 2px;
+                position: absolute;
+                left: 50%;
+                bottom: -5px;
+                background-color: var(--green-neon);
+                transition: width ease-in-out 0.3s, left ease-in-out 0.3s;
+              }
+              &:hover {
+                color: var(--green-neon);
+                transition: color ease-in-out 0.3s;
+                &::after {
+                  width: 100%;
+                  left: 0;
+                  transition: width ease-in-out 0.3s, left ease-in-out 0.3s;
+                }
+              }
+              &.active {
+                color: var(--green-neon);
+              }
+            }
+          }
         }
       }
       .nav__list {
         opacity: 1;
         transition: opacity ease-in-out 0.3s;
-      }
-    }
-    &.nav {
-      &--light {
-        background-color: var(--blue);
-      }
-      &--dark {
-        background-color: var(--blue-dark);
       }
     }
     .nav__list {
@@ -121,6 +168,9 @@
         font-weight: 600;
         text-align: center;
         padding-bottom: 2rem;
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
     }
   }

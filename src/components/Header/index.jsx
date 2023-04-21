@@ -9,7 +9,13 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__item">
-        <Link className="header__item__link logo" to="/">
+        <Link
+          className="header__item__link logo"
+          to="/"
+          onClick={() =>
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+          }
+        >
           <Logo alt="Logo" className="logo__img" fill="#fff" />
         </Link>
       </div>

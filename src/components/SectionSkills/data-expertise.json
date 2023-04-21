@@ -1,0 +1,204 @@
+[
+  {
+    "id": "1",
+    "title": "Front end",
+    "description": {
+      "intro": "je vous accompagne afin de :",
+      "list": [
+        "donner vie au design de vos interfaces web & mobile tout en favorisant une expérience utilisateur de qualité.",
+        "satisfaire vos attentes et celles de vos clients en termes d'ergonomie et d'accessibilité, notamment au travers du responsive design."
+      ]
+    },
+    "technologies": [
+      {
+        "title": "langages",
+        "icons": [
+          {
+            "path": "/",
+            "name": "SiHtml5"
+          },
+          {
+            "path": "/",
+            "name": "SiCss3"
+          },
+          {
+            "path": "/",
+            "name": "SiJavascript"
+          },
+          {
+            "path": "/",
+            "name": "SiSass"
+          }
+        ]
+      },
+      {
+        "title": "librairies",
+        "icons": [
+          {
+            "path": "/",
+            "name": "SiReact"
+          },
+          {
+            "path": "/",
+            "name": "SiRedux"
+          },
+          {
+            "path": "/",
+            "name": "SiReactrouter"
+          },
+          {
+            "path": "/",
+            "name": "SiJquery"
+          }
+        ]
+      },
+      {
+        "title": "frameworks",
+        "icons": [
+          {
+            "path": "/",
+            "name": "SiBootstrap"
+          }
+        ]
+      },
+      {
+        "title": "méthodologies",
+        "icons": [
+          {
+            "path": "/",
+            "name": "SiBem"
+          },
+          {
+            "path": "/",
+            "name": "SiGit"
+          },
+          {
+            "path": "/",
+            "name": "SiGithub"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Back end",
+    "description": {
+      "intro": "je vous accompagne afin de :",
+      "list": [
+        "créer votre serveur et/ou mettre en place les services de votre API",
+        "modéliser et intéragir avec des bases de données noSQL."
+      ]
+    },
+    "technologies": [
+      {
+        "title": "langages",
+        "icons": [
+          {
+            "path": "/",
+            "name": "SiJavascript"
+          },
+          {
+            "path": "/",
+            "name": "SiSwagger"
+          }
+        ]
+      },
+      {
+        "title": "librairies",
+        "icons": [
+          {
+            "path": "/",
+            "name": "SiNodedotjs"
+          }
+        ]
+      },
+      {
+        "title": "frameworks",
+        "icons": [
+          {
+            "path": "/",
+            "name": "SiExpress"
+          }
+        ]
+      },
+      {
+        "title": "bases de données",
+        "icons": [
+          {
+            "path": "/",
+            "name": "SiMongodb"
+          }
+        ]
+      },
+      {
+        "title": "méthodologies",
+        "icons": [
+          {
+            "path": "/",
+            "name": "SiGit"
+          },
+          {
+            "path": "/",
+            "name": "SiGithub"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "SEO / Accessibilité / Performance",
+    "description": {
+      "intro": "je vous accompagne afin de :",
+      "list": [
+        "veiller à l'application des recommandations techniques destinées à améliorer et optimiser le référencement naturel",
+        "satisfaire aux recommandations W3C pour l'accessibilité ainsi qu'au RGAA."
+      ]
+    },
+    "technologies": [
+      {
+        "title": "outils",
+        "texts": ["Lighthouse", "Google Rich Snippet", "Wave"]
+      },
+      {
+        "title": "méthodologies",
+        "texts": ["ARIA", "Schema.org"]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Design",
+    "description": {
+      "intro": "je vous propose mes services pour :",
+      "list": [
+        "concevoir une identité visuelle qui vous ressemble.",
+        "réaliser les maquettes de vos projets web."
+      ]
+    },
+    "technologies": [
+      {
+        "title": "logiciels",
+        "icons": [
+          {
+            "path": "/",
+            "name": "SiFigma"
+          },
+          {
+            "path": "/",
+            "name": "SiAdobexd"
+          },
+          {
+            "path": "/",
+            "name": "SiAdobephotoshop"
+          },
+          {
+            "path": "/",
+            "name": "SiAdobeillustrator"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,13 +1,143 @@
+@import '../../utils/style/media-queries';
+
 .section.section--hero {
+  @include tablet {
+    padding: 3rem 0;
+  }
+  @include desktop {
+    height: 100vh;
+    justify-content: center;
+  }
   .section__header {
-    &__baseline {
-      font-size: 0.75rem;
-      font-weight: 500;
-      font-family: var(--font-secondary);
-      text-transform: uppercase;
+    position: relative;
+    @include desktop {
+      .section__header__text-banner {
+        width: 70%;
+      }
+    }
+
+    /* &__name {
+      flex-basis: 100%;
+      font-size: 1.444rem;
+      font-weight: 200;
+      padding-left: 1.5rem;
+      @include desktop {
+        padding-left: 3rem;
+      }
     }
     &__title {
-      flex-basis: 100%;
+      font-size: 3.167rem;
+      font-weight: 900;
+      line-height: 3.167rem;
+      padding-left: 1.5rem;
+      position: relative;
+      @include tablet {
+        flex-basis: 100%;
+      }
+      &.title-start::before {
+        content: '<';
+        color: var(--green-neon);
+        font-size: 3.167rem;
+        font-weight: 900;
+        position: absolute;
+        top: -0.25rem;
+        left: -0.25rem;
+      }
+      &.title-end {
+        padding-left: 3.622rem;
+        @include tablet {
+          flex-basis: auto;
+        }
+        &::after {
+          content: '/>';
+          color: var(--green-neon);
+          font-size: 3.167rem;
+          font-weight: 900;
+          position: absolute;
+          top: 0;
+          right: -4.25rem;
+          @include tablet {
+            right: -4.5rem;
+          }
+        }
+      }
+    }
+    &__grade {
+      font-size: 0.778rem;
+      font-weight: 800;
+      position: absolute;
+      top: 6rem;
+      left: 1.5rem;
+      transform: rotate(-90deg);
+    }
+    @include desktop {
+      &__name {
+        font-size: 4rem;
+      }
+      &__title {
+        font-size: 7rem;
+        line-height: 7rem;
+        padding-left: 1.5rem;
+        &.title-end {
+          padding-left: 6.125rem;
+        }
+      }
+      &__grade {
+        font-size: 1.75rem;
+        top: 14rem;
+        left: 1.5rem;
+        transform: rotate(-90deg);
+      }
+    } */
+  }
+  @include tablet {
+    .icons-bar {
+      width: auto;
+      position: fixed;
+      left: 1.5rem;
+      bottom: 1rem;
+      opacity: 1;
+      -webkit-transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -ms-transition: opacity 1s ease-in-out;
+      -o-transition: opacity 1s ease-in-out;
+      &.hidden {
+        opacity: 0;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+      }
+      &__list {
+        flex-direction: column;
+      }
+    }
+  }
+  @include desktop {
+    .btn--green-neon {
+      width: 25%;
+      /* margin-left: 2rem; */
+    }
+    .icons-bar {
+      width: auto;
+      position: fixed;
+      left: 1.5rem;
+      bottom: 1rem;
+      opacity: 1;
+      -webkit-transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -ms-transition: opacity 1s ease-in-out;
+      -o-transition: opacity 1s ease-in-out;
+      &.hidden {
+        opacity: 0;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+      }
+      &__list {
+        flex-direction: column;
+      }
     }
   }
 }

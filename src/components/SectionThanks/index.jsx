@@ -1,6 +1,5 @@
 import React from 'react';
 import { ReactComponent as ThanksCircle } from '../../assets/thanks_circle.svg';
-import LikeCounter from '../LikeCounter';
 import './style.scss';
 
 const SectionThanks = () => {
@@ -9,7 +8,6 @@ const SectionThanks = () => {
       <div className="section__body">
         <div className="section__body__item">
           <ThanksCircle className="img img--animated" />
-          <LikeCounter />
         </div>
       </div>
     </section>

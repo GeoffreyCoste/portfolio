@@ -1,39 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
-import { FaHeart, FaCodepen, FaBehance, FaLinkedinIn } from 'react-icons/fa';
-import { FiGithub, FiDribbble } from 'react-icons/fi';
+import { FaHeart } from 'react-icons/fa';
+import icons from './data.icons.json';
 import './style.scss';
 import IconsBar from '../IconsBar';
-
-const icons = [
-  {
-    path: '/',
-    Icon: FiGithub,
-  },
-  {
-    path: '/',
-    Icon: FaCodepen,
-  },
-  {
-    path: '/',
-    Icon: FiDribbble,
-  },
-  {
-    path: '/',
-    Icon: FaBehance,
-  },
-  {
-    path: '/',
-    Icon: FaLinkedinIn,
-  },
-];
 
 const Footer = () => {
   return (
     <footer className="footer border-top-blue">
       <div className="footer__item">
-        <Link to="/" className="footer__item__link logo">
+        <Link
+          to="/"
+          className="footer__item__link logo"
+          onClick={() =>
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+          }
+        >
           <Logo alt="Logo" className="logo__img" fill="#fff" />
         </Link>
       </div>
