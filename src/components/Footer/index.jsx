@@ -10,7 +10,13 @@ const Footer = () => {
   return (
     <footer className="footer border-top-blue">
       <div className="footer__item">
-        <Link to="/" className="footer__item__link logo">
+        <Link
+          to="/"
+          className="footer__item__link logo"
+          onClick={() =>
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+          }
+        >
           <Logo alt="Logo" className="logo__img" fill="#fff" />
         </Link>
       </div>

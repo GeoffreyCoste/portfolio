@@ -12,7 +12,9 @@ const Header = () => {
         <Link
           className="header__item__link logo"
           to="/"
-          onClick={() => window.scrollTo(0, 0)}
+          onClick={() =>
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+          }
         >
           <Logo alt="Logo" className="logo__img" fill="#fff" />
         </Link>

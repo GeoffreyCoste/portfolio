@@ -22,7 +22,7 @@ const EmailAnim = ({ pinnedElement }) => {
           end: '+=' + frame_count * offset_value,
           pin: true,
           scrub: true,
-          markers: true,
+          /* markers: true, */
         },
       });
 

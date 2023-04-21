@@ -28,7 +28,7 @@ const SectionContact = () => {
 
   const handleClick = () => {
     setClick(true);
-    navigator.clipboard.writeText('contact@geoffreycoste.fr');
+    navigator.clipboard.writeText('contact.gcoste@gmail.com');
     setTimeout(() => {
       setClick(false);
     }, 2000);
@@ -93,7 +93,7 @@ const SectionContact = () => {
             onLeave: function () {
               hide(elem);
             }, // assure that the element is hidden when scrolled into view
-            markers: true,
+            /* markers: true, */
           },
         });
       });
@@ -146,7 +146,7 @@ const SectionContact = () => {
                     Nouveau mail <FiArrowRight className="arrow-sliding" />
                   </>
                 ) : (
-                  <>&gt; contact@geoffreycoste.fr</>
+                  <>&gt; contact.gcoste@gmail.com</>
                 )}
               </p>
             )}
@@ -172,7 +172,7 @@ const SectionContact = () => {
             >
               <a
                 className="btn__link"
-                href="mailto:contact@geoffreycoste.fr?subject=Bonjour !"
+                href="mailto:contact.gcoste@gmail.com?subject=Bonjour !"
                 target="_blank"
                 rel="noopener noreferrer"
               >
