@@ -5,7 +5,6 @@ import SectionSkills from '../../components/SectionSkills';
 import SectionPortfolio from '../../components/SectionPortfolio';
 import ScrollAnimBanner from '../../components/ScrollAnimBanner';
 import SectionContact from '../../components/SectionContact';
-import './style.scss';
 
 const Home = () => {
   return (
